@@ -1,0 +1,11 @@
+_id: ut_95b805cfec0b4a249bb6f544b1f7d170
+type: UnitTest
+parentId: uts_64841c49a20d42ed8b04a7d0aa5dd313
+modified: 1657614054318
+created: 1657613957819
+requestId: req_wrk_10fd3464a65e4a238058efa78f43b5e23d1a51d3
+name: Is status sold?
+code: |-
+  const response = await insomnia.send();
+  const body = JSON.parse(response.data);
+  expect(body.status).to.equal("sold");

@@ -1,0 +1,11 @@
+_id: ut_3f9925be87ae4f0db572016247082a11
+type: UnitTest
+parentId: uts_64841c49a20d42ed8b04a7d0aa5dd313
+modified: 1657614039240
+created: 1657613845486
+requestId: req_wrk_10fd3464a65e4a238058efa78f43b5e23d1a51d3
+name: Is pet having a status?
+code: |-
+  const response = await insomnia.send();
+  const body = JSON.parse(response.data);
+  expect(body).to.have.property('status');
